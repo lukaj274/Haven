@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Haven"
+run/main_scene="uid://c1yh7tl5twgw3"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
