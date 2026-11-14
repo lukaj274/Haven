@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dy624wo6y8ua"]
+
+[ext_resource type="Script" uid="uid://o4ens4l86sqp" path="res://Scripts/apple.gd" id="1_ir1en"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_v3gsn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u28px"]
+radius = 60.074955
+
+[node name="Apple" type="Area2D" unique_id=1173396721]
+script = ExtResource("1_ir1en")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=261852924]
+texture = ExtResource("1_v3gsn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1793349807]
+shape = SubResource("CircleShape2D_u28px")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
