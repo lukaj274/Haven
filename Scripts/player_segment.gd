@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var next_segment: CharacterBody2D
 @export var last_segment: CharacterBody2D
+@export var segment_type: PackedScene
 @export var last:bool
 
 var follow_speed: float = 7
@@ -30,8 +31,9 @@ func _on_more_request() -> void:
 		set_meta("Active", true)
 	# Duplicate
 	else:
-		next_segment = duplicate()
+		next_segment = segment_type.instantiate()
 		next_segment.last_segment = $"."
 		last = false
 		$AnimatedSprite2D.play("middle")
-		
+		add_child(next_segment)
+	

@@ -22,5 +22,4 @@ func _physics_process(_delta: float) -> void:
 	rotation_degrees += wanted_rotation * 2
 
 func copy() -> void:
-	print("hello")
 	more.emit()
