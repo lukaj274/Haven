@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b735o14qw6ist"
-path="res://.godot/imported/BAD MOUSE.png-1ad2e9cc7ac507dd55f70c81d43a6b0f.ctex"
+path="res://.godot/imported/BAD MOUSE.png-71ee485af9ccb946fd3a13fc50de9755.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scripts/BAD MOUSE.png"
-dest_files=["res://.godot/imported/BAD MOUSE.png-1ad2e9cc7ac507dd55f70c81d43a6b0f.ctex"]
+source_file="res://Assets/BAD MOUSE.png"
+dest_files=["res://.godot/imported/BAD MOUSE.png-71ee485af9ccb946fd3a13fc50de9755.ctex"]
 
 [params]
 
