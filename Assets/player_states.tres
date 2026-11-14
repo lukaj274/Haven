@@ -1,0 +1,22 @@
+[gd_resource type="TileSet" format=3 uid="uid://r7akym7lrc3m"]
+
+[ext_resource type="Texture2D" uid="uid://dgq6h10wj2b0b" path="res://Assets/Snake.png" id="1_y853w"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c6jor"]
+texture = ExtResource("1_y853w")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_c6jor")

@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dkwatx0ruyqiw"]
+
+[ext_resource type="Script" uid="uid://yve55v0nbphh" path="res://Scripts/player_head.gd" id="1_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://cwcfsrgcx4ose" path="res://Assets/Snake/sprite_0.png" id="1_v0iea"]
+[ext_resource type="Texture2D" uid="uid://dgq6h10wj2b0b" path="res://Assets/Snake.png" id="2_cvnsp"]
+[ext_resource type="Script" uid="uid://smnw3hb5wp77" path="res://Scenes/player_segment.gd" id="3_vgqql"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y853w"]
+radius = 14.0
+height = 28.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u28px"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t5aa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgqql")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="Node2D" unique_id=511959036]
+
+[node name="Head" type="CharacterBody2D" parent="." unique_id=2118705235 node_paths=PackedStringArray("segment")]
+script = ExtResource("1_6t5aa")
+segment = NodePath("../Segment")
+
+[node name="Sprite2D" type="Sprite2D" parent="Head" unique_id=1871162063]
+texture_filter = 1
+texture = ExtResource("1_v0iea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head" unique_id=1828188731]
+shape = SubResource("CapsuleShape2D_y853w")
+
+[node name="Segment" type="CharacterBody2D" parent="." unique_id=1747622899]
+position = Vector2(0, 32)
+script = ExtResource("3_vgqql")
+metadata/Active = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Segment" unique_id=1103105430]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_u28px")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Segment" unique_id=105790718]
+shape = SubResource("CapsuleShape2D_y853w")
+
+[connection signal="more" from="Head" to="Segment" method="_on_more_request"]
