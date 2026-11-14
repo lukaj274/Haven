@@ -19,8 +19,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	var wanted_rotation = Input.get_axis("turn_left", "turn_right")
-	rotation_degrees += wanted_rotation
+	rotation_degrees += wanted_rotation * 2
 
 func copy() -> void:
-	print("hello")
 	more.emit()

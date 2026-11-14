@@ -2,9 +2,10 @@ extends CharacterBody2D
 
 @export var next_segment: CharacterBody2D
 @export var last_segment: CharacterBody2D
+@export var segment_type: PackedScene
 @export var last:bool
 
-var follow_speed: float = 0.5
+var follow_speed: float = 7
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,6 +19,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if last_segment:
 		global_position = global_position.lerp(last_segment.global_position, follow_speed * delta)
+		global_rotation_degrees = last_segment.global_rotation_degrees
 
 
 func _on_more_request() -> void:
@@ -25,10 +27,13 @@ func _on_more_request() -> void:
 	if !(get_meta("Active")):
 		$AnimatedSprite2D.show()
 		$CollisionShape2D.disabled = true
+		$AnimatedSprite2D.play("end")
 		set_meta("Active", true)
 	# Duplicate
 	else:
-		next_segment = duplicate()
+		next_segment = segment_type.instantiate()
 		next_segment.last_segment = $"."
 		last = false
-		
+		$AnimatedSprite2D.play("middle")
+		add_child(next_segment)
+	

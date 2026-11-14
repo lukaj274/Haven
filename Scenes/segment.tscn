@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dwnx0ots3wj0"]
+
+[ext_resource type="Script" uid="uid://smnw3hb5wp77" path="res://Scripts/player_segment.gd" id="1_r4hr2"]
+[ext_resource type="Texture2D" uid="uid://bw3n3tu6l745u" path="res://Assets/Snake/sprite_2.png" id="2_emipg"]
+[ext_resource type="Texture2D" uid="uid://dgq6h10wj2b0b" path="res://Assets/Snake.png" id="3_owyt2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
+atlas = ExtResource("3_owyt2")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u28px"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_emipg")
+}],
+"loop": 1,
+"name": &"end",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t5aa")
+}],
+"loop": 1,
+"name": &"middle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y853w"]
+radius = 14.0
+height = 28.0
+
+[node name="Segment" type="CharacterBody2D" unique_id=1586952238 node_paths=PackedStringArray("last_segment")]
+script = ExtResource("1_r4hr2")
+last_segment = NodePath("")
+metadata/Active = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1434964910]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_u28px")
+animation = &"end"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=577756675]
+shape = SubResource("CapsuleShape2D_y853w")
