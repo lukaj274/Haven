@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
-var next_segment: CharacterBody2D
+@export var next_segment: CharacterBody2D
+@export var last_segment: CharacterBody2D
 @export var last:bool
+
+var follow_speed: float = 0.5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,7 +16,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if last_segment:
+		global_position = global_position.lerp(last_segment.global_position, follow_speed * delta)
 
 
 func _on_more_request() -> void:
@@ -25,5 +29,6 @@ func _on_more_request() -> void:
 	# Duplicate
 	else:
 		next_segment = duplicate()
+		next_segment.last_segment = $"."
 		last = false
 		

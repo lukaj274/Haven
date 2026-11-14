@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dkwatx0ruyqiw"]
 
 [ext_resource type="Script" uid="uid://yve55v0nbphh" path="res://Scripts/player_head.gd" id="1_6t5aa"]
+[ext_resource type="Script" uid="uid://1t7bshyr2qbr" path="res://Scripts/player.gd" id="1_fkybt"]
 [ext_resource type="Texture2D" uid="uid://cwcfsrgcx4ose" path="res://Assets/Snake/sprite_0.png" id="1_v0iea"]
 [ext_resource type="Texture2D" uid="uid://dgq6h10wj2b0b" path="res://Assets/Snake.png" id="2_cvnsp"]
-[ext_resource type="Script" uid="uid://smnw3hb5wp77" path="res://Scenes/player_segment.gd" id="3_vgqql"]
+[ext_resource type="Script" uid="uid://smnw3hb5wp77" path="res://Scripts/player_segment.gd" id="3_vgqql"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y853w"]
 radius = 14.0
@@ -32,10 +33,13 @@ animations = [{
 }]
 
 [node name="Player" type="Node2D" unique_id=511959036]
+script = ExtResource("1_fkybt")
+metadata/_edit_group_ = true
 
 [node name="Head" type="CharacterBody2D" parent="." unique_id=2118705235 node_paths=PackedStringArray("segment")]
 script = ExtResource("1_6t5aa")
 segment = NodePath("../Segment")
+speed = 300.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Head" unique_id=1871162063]
 texture_filter = 1
@@ -44,9 +48,10 @@ texture = ExtResource("1_v0iea")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Head" unique_id=1828188731]
 shape = SubResource("CapsuleShape2D_y853w")
 
-[node name="Segment" type="CharacterBody2D" parent="." unique_id=1747622899]
+[node name="Segment" type="CharacterBody2D" parent="." unique_id=1747622899 node_paths=PackedStringArray("last_segment")]
 position = Vector2(0, 32)
 script = ExtResource("3_vgqql")
+last_segment = NodePath("../Head")
 metadata/Active = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Segment" unique_id=1103105430]
