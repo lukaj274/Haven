@@ -39,6 +39,7 @@ func _on_more_request() -> void:
 		next_segment.last_segment = $"."
 		next_segment.segment_type = segment_type
 		next_segment.position = Vector2(0, 32)
+		next_segment.get_node("AnimatedSprite2D").play("end")
 		last = false
 		$AnimatedSprite2D.play("middle")
 		get_parent().add_child(next_segment)
