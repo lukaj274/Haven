@@ -15,4 +15,5 @@ func _process(delta: float) -> void:
 
 func _on_player_add_score() -> void:
 	score += 1
+	score_text.text = str(score)
 	
