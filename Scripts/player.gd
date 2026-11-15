@@ -15,6 +15,5 @@ func _process(delta: float) -> void:
 
 func add() -> void:
 	score += 1
-	#area.queue_free()
 	$Head.copy()
 	print(score)

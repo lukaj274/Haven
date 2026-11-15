@@ -13,10 +13,10 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body is CharacterBody2D:
-		#player.add()
-		var screen_size = get_viewport_rect().size
-		position = Vector2(
+	if body.name == "Head":
+			body.get_parent().add()
+			var screen_size = get_viewport_rect().size
+			position = Vector2(
 			randf_range(50, screen_size.x - 50),
 			randf_range(50, screen_size.y - 50)
 		)
