@@ -5,10 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://li5vbkf5415q" path="res://Assets/New Piskel (6).png" id="2_kefmi"]
 [ext_resource type="Texture2D" uid="uid://bp3i35qndktnf" path="res://Assets/New Piskel (7).png" id="2_m85yq"]
 [ext_resource type="AudioStream" uid="uid://d2xetm6fpepcu" path="res://Assets/Menu-song.mp3" id="2_miasx"]
+[ext_resource type="Script" uid="uid://oev4eedcsfqs" path="res://Scripts/last_score_text.gd" id="6_l48gv"]
 
 [sub_resource type="FontVariation" id="FontVariation_25bs2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b1lj4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u28px"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Node2D" unique_id=736728439]
 script = ExtResource("1_m85yq")
@@ -73,6 +78,15 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=20217540]
+
+[node name="LastScoreText" type="Label" parent="." unique_id=808803411]
+offset_left = 824.0
+offset_top = 562.0
+offset_right = 1126.0
+offset_bottom = 631.0
+text = "Last Score: 0"
+label_settings = SubResource("LabelSettings_u28px")
+script = ExtResource("6_l48gv")
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

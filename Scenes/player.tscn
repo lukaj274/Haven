@@ -38,3 +38,4 @@ segment_type = ExtResource("4_vgqql")
 metadata/Active = false
 
 [connection signal="more" from="Head" to="Segment" method="_on_more_request"]
+[connection signal="over" from="Head" to="." method="_on_head_over"]

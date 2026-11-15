@@ -296,6 +296,7 @@ position = Vector2(562, 125)
 scale = Vector2(2, 2)
 
 [connection signal="add_score" from="Player" to="." method="_on_player_add_score"]
+[connection signal="game_over" from="Player" to="." method="_on_over"]
 [connection signal="area_entered" from="Apple" to="Player" method="_on_apple_area_entered"]
 [connection signal="area_entered" from="Apple2" to="Player" method="_on_apple_area_entered"]
 [connection signal="area_entered" from="Apple3" to="Player" method="_on_apple_area_entered"]
@@ -303,3 +304,4 @@ scale = Vector2(2, 2)
 [connection signal="area_entered" from="Apple5" to="Player" method="_on_apple_area_entered"]
 [connection signal="area_entered" from="Apple6" to="Player" method="_on_apple_area_entered"]
 [connection signal="area_entered" from="Apple7" to="Player" method="_on_apple_area_entered"]
+[connection signal="over" from="Pepper" to="." method="_on_over"]

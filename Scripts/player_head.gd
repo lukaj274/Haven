@@ -7,6 +7,7 @@ extends CharacterBody2D
 var bonus_speed: float = 0.0
 
 signal more
+signal over
 
 func _ready() -> void:
 	menu = get_parent().menu
@@ -26,7 +27,7 @@ func _physics_process(_delta: float) -> void:
 
 		if collider is CharacterBody2D:
 			print("Collided with another CharacterBody2D: ", collider.name)
-			get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+			over.emit()
 			return
 		elif collider is TileMapLayer:
 			print("Collided with a wall")
