@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://btrbgs3ijr264"]
+
+[ext_resource type="Texture2D" uid="uid://b5yt6pti3qhym" path="res://New Piskel (4) (1).png" id="1_v6hj4"]
+[ext_resource type="Texture2D" uid="uid://li5vbkf5415q" path="res://New Piskel (6).png" id="2_kefmi"]
+
+[node name="Menu" type="Node2D" unique_id=736728439]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=293387457]
+offset_left = 467.99994
+offset_top = 231.0
+offset_right = 507.99994
+offset_bottom = 315.0
+scale = Vector2(19.817053, 10.78481)
+pivot_offset = Vector2(14.372978, 10.329885)
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=857011694]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "Boa Boing"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=859194425]
+layout_mode = 2
+icon = ExtResource("1_v6hj4")
+flat = true
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1694831545]
+layout_mode = 2
+icon = ExtResource("2_kefmi")
+flat = true
