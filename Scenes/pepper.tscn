@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://hlctaaqgoqxt"]
 
-[ext_resource type="Script" uid="uid://o4ens4l86sqp" path="res://Scripts/apple.gd" id="1_pydkg"]
+[ext_resource type="Script" uid="uid://gpkxhcli7u1x" path="res://Scripts/pepper.gd" id="1_pydkg"]
 [ext_resource type="Texture2D" uid="uid://cfev5t1j6r52n" path="res://Assets/PEPPEER (1).png" id="2_bjcq3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2q34x"]

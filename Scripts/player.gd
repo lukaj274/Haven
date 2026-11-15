@@ -4,6 +4,7 @@ extends Node2D
 @export var menu: PackedScene
 
 signal add_score
+signal game_over
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,3 +23,7 @@ func add() -> void:
 	add_score.emit()
 	$Head.copy()
 	print(score)
+
+
+func _on_head_over() -> void:
+	game_over.emit()
