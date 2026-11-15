@@ -27,6 +27,13 @@ func _physics_process(_delta: float) -> void:
 			print("Collided with another CharacterBody2D: ", collider.name)
 			# Trigger your custom event or signal here
 			get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+		elif collider is StaticBody2D:
+			print("Collided with a wall")
+			# Bounce off the wall by reflecting velocity off the collision normal
+			var normal := collision.get_normal()
+			velocity = velocity.bounce(normal)
+			# Update rotation to face the new bounced direction
+			rotation = velocity.angle() + PI/2
 	
 	var wanted_rotation = Input.get_axis("turn_left", "turn_right")
 	rotation_degrees += wanted_rotation * 2
