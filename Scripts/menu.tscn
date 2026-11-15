@@ -1,33 +1,59 @@
 [gd_scene format=3 uid="uid://btrbgs3ijr264"]
 
+[ext_resource type="Script" uid="uid://b5timfmg8mqvy" path="res://Scripts/menu.gd" id="1_m85yq"]
 [ext_resource type="Texture2D" uid="uid://b5yt6pti3qhym" path="res://New Piskel (4) (1).png" id="1_v6hj4"]
 [ext_resource type="Texture2D" uid="uid://li5vbkf5415q" path="res://New Piskel (6).png" id="2_kefmi"]
 
 [node name="Menu" type="Node2D" unique_id=736728439]
+script = ExtResource("1_m85yq")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=293387457]
-offset_left = 467.99994
-offset_top = 231.0
-offset_right = 507.99994
-offset_bottom = 315.0
-scale = Vector2(19.817053, 10.78481)
-pivot_offset = Vector2(14.372978, 10.329885)
-theme_override_constants/separation = 4
+offset_left = 44.0
+offset_top = 2.0
+offset_right = 671.30945
+offset_bottom = 653.0
+scale = Vector2(1.838, 1)
+pivot_offset = Vector2(48.21389, 22.538734)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 3
 alignment = 1
+metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=857011694]
 layout_mode = 2
-theme_override_font_sizes/font_size = 128
+theme_override_font_sizes/font_size = 72
 text = "Boa Boing"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=859194425]
+[node name="PlayButton" type="TextureButton" parent="VBoxContainer" unique_id=1115071105]
+texture_filter = 1
+custom_minimum_size = Vector2(220, 70)
 layout_mode = 2
-icon = ExtResource("1_v6hj4")
-flat = true
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_v6hj4")
+texture_pressed = ExtResource("1_v6hj4")
+texture_hover = ExtResource("1_v6hj4")
+texture_disabled = ExtResource("1_v6hj4")
+texture_focused = ExtResource("1_v6hj4")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1694831545]
+[node name="QuitButton" type="TextureButton" parent="VBoxContainer" unique_id=171358424]
+texture_filter = 1
+custom_minimum_size = Vector2(220, 70)
 layout_mode = 2
-icon = ExtResource("2_kefmi")
-flat = true
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_kefmi")
+texture_pressed = ExtResource("2_kefmi")
+texture_hover = ExtResource("2_kefmi")
+texture_disabled = ExtResource("2_kefmi")
+texture_focused = ExtResource("2_kefmi")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=20217540]
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
