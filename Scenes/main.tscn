@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dkwatx0ruyqiw" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://bqq245v7esvby" path="res://Scenes/main.gd" id="1_kry3j"]
 [ext_resource type="Texture2D" uid="uid://bp3kj4m67y6qe" path="res://Assets/New Piskel (10).png" id="2_6bp64"]
-[ext_resource type="AudioStream" uid="uid://dun1qbjpcn6de" path="res://Assets/Game-song.mp3" id="2_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dy624wo6y8ua" path="res://Scenes/apple.tscn" id="2_bo1nx"]
+[ext_resource type="AudioStream" uid="uid://dwtodswd5r8v1" path="res://game-song_eLjxKeup.mp3" id="3_21xkr"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7u77a"]
 load_path = "res://.godot/imported/New Piskel (2).png-3d24c5253c61fed48c994c32af58f107.ctex"
@@ -233,7 +233,7 @@ texture = ExtResource("2_6bp64")
 expand_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1251680065]
-stream = ExtResource("2_21xkr")
+stream = ExtResource("3_21xkr")
 autoplay = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1456900613]
