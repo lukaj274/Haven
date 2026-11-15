@@ -220,6 +220,9 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_priority = 0.0
 sources/4 = SubResource("TileSetAtlasSource_jjgbg")
 
+[sub_resource type="LabelSettings" id="LabelSettings_u28px"]
+font_size = 50
+
 [node name="Main" type="Node2D" unique_id=59448657]
 script = ExtResource("1_kry3j")
 
@@ -270,6 +273,17 @@ scale = Vector2(2, 2)
 position = Vector2(559, 226)
 scale = Vector2(2, 2)
 
+[node name="ScoreText" type="Label" parent="." unique_id=1461740104]
+offset_left = 56.0
+offset_top = 40.0
+offset_right = 108.0
+offset_bottom = 63.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Score: "
+label_settings = SubResource("LabelSettings_u28px")
+
+[connection signal="add_score" from="Player" to="." method="_on_player_add_score"]
 [connection signal="area_entered" from="Apple" to="Player" method="_on_apple_area_entered"]
 [connection signal="area_entered" from="Apple2" to="Player" method="_on_apple_area_entered"]
 [connection signal="area_entered" from="Apple3" to="Player" method="_on_apple_area_entered"]
