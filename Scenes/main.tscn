@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bp3kj4m67y6qe" path="res://Assets/New Piskel (10).png" id="2_6bp64"]
 [ext_resource type="PackedScene" uid="uid://dy624wo6y8ua" path="res://Scenes/apple.tscn" id="2_bo1nx"]
 [ext_resource type="AudioStream" uid="uid://dwtodswd5r8v1" path="res://game-song_eLjxKeup.mp3" id="3_21xkr"]
+[ext_resource type="PackedScene" uid="uid://cik866upj3l30" path="res://Scenes/mouse.tscn" id="7_344ge"]
+[ext_resource type="PackedScene" uid="uid://hlctaaqgoqxt" path="res://Scenes/pepper.tscn" id="8_ynf5e"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7u77a"]
 load_path = "res://.godot/imported/New Piskel (2).png-3d24c5253c61fed48c994c32af58f107.ctex"
@@ -284,6 +286,14 @@ size_flags_vertical = 8
 text = "0 "
 label_settings = SubResource("LabelSettings_u28px")
 horizontal_alignment = 2
+
+[node name="Mouse" parent="." unique_id=1197658796 instance=ExtResource("7_344ge")]
+position = Vector2(122, 398)
+scale = Vector2(2, 2)
+
+[node name="Pepper" parent="." unique_id=1295557213 instance=ExtResource("8_ynf5e")]
+position = Vector2(562, 125)
+scale = Vector2(2, 2)
 
 [connection signal="add_score" from="Player" to="." method="_on_player_add_score"]
 [connection signal="area_entered" from="Apple" to="Player" method="_on_apple_area_entered"]
