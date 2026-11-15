@@ -13,9 +13,8 @@ height = 28.0
 script = ExtResource("1_fkybt")
 metadata/_edit_group_ = true
 
-[node name="Head" type="CharacterBody2D" parent="." unique_id=2118705235 node_paths=PackedStringArray("segment")]
+[node name="Head" type="CharacterBody2D" parent="." unique_id=2118705235]
 script = ExtResource("1_6t5aa")
-segment = NodePath("")
 speed = 300.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Head" unique_id=1871162063]
@@ -29,3 +28,6 @@ shape = SubResource("CapsuleShape2D_y853w")
 position = Vector2(0, 32)
 last_segment = NodePath("../Head")
 segment_type = ExtResource("4_vgqql")
+metadata/Active = false
+
+[connection signal="more" from="Head" to="Segment" method="_on_more_request"]

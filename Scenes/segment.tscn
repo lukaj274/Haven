@@ -31,10 +31,9 @@ animations = [{
 radius = 14.0
 height = 28.0
 
-[node name="Segment" type="CharacterBody2D" unique_id=1586952238 node_paths=PackedStringArray("last_segment")]
+[node name="Segment" type="CharacterBody2D" unique_id=1586952238]
 script = ExtResource("1_r4hr2")
-last_segment = NodePath("")
-metadata/Active = false
+metadata/Active = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1434964910]
 texture_filter = 1
