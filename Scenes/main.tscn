@@ -220,21 +220,6 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_priority = 0.0
 sources/4 = SubResource("TileSetAtlasSource_jjgbg")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u28px"]
-distance = -599.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3c67j"]
-normal = Vector2(0, 1)
-distance = 45.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t2h7q"]
-normal = Vector2(1, 0)
-distance = 46.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b42pr"]
-normal = Vector2(-1, 0)
-distance = -1110.0
-
 [node name="Main" type="Node2D" unique_id=59448657]
 script = ExtResource("1_kry3j")
 
@@ -284,20 +269,6 @@ scale = Vector2(2, 2)
 [node name="Apple7" parent="." unique_id=1382537941 instance=ExtResource("2_bo1nx")]
 position = Vector2(559, 226)
 scale = Vector2(2, 2)
-
-[node name="Boundaries" type="StaticBody2D" parent="." unique_id=273587923]
-
-[node name="Bottom" type="CollisionShape2D" parent="Boundaries" unique_id=1021687005]
-shape = SubResource("WorldBoundaryShape2D_u28px")
-
-[node name="Top" type="CollisionShape2D" parent="Boundaries" unique_id=1816758629]
-shape = SubResource("WorldBoundaryShape2D_3c67j")
-
-[node name="Left" type="CollisionShape2D" parent="Boundaries" unique_id=262348421]
-shape = SubResource("WorldBoundaryShape2D_t2h7q")
-
-[node name="Right" type="CollisionShape2D" parent="Boundaries" unique_id=1114450001]
-shape = SubResource("WorldBoundaryShape2D_b42pr")
 
 [connection signal="area_entered" from="Apple" to="Player" method="_on_apple_area_entered"]
 [connection signal="area_entered" from="Apple2" to="Player" method="_on_apple_area_entered"]

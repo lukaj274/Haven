@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://hlctaaqgoqxt"]
+
+[ext_resource type="Script" uid="uid://o4ens4l86sqp" path="res://Scripts/apple.gd" id="1_pydkg"]
+[ext_resource type="Texture2D" uid="uid://cfev5t1j6r52n" path="res://Assets/PEPPEER (1).png" id="2_bjcq3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2q34x"]
+radius = 3.160759
+height = 18.0
+
+[node name="Pepper" type="Area2D" unique_id=1173396721]
+position = Vector2(-2, 1)
+script = ExtResource("1_pydkg")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=261852924]
+texture_filter = 1
+position = Vector2(4, 2)
+texture = ExtResource("2_bjcq3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1793349807]
+position = Vector2(1, 0)
+rotation = -0.35274616
+shape = SubResource("CapsuleShape2D_2q34x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
