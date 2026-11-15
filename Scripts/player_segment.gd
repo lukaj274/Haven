@@ -42,4 +42,3 @@ func _on_more_request() -> void:
 		last = false
 		$AnimatedSprite2D.play("middle")
 		get_parent().add_child(next_segment)
-	

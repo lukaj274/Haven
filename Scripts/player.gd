@@ -1,6 +1,7 @@
 extends Node2D
 
-@export var score:int
+@export var score: int
+@export var menu: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
