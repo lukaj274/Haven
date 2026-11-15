@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cik866upj3l30"]
+
+[ext_resource type="Script" uid="uid://o4ens4l86sqp" path="res://Scripts/apple.gd" id="1_3ber4"]
+[ext_resource type="Texture2D" uid="uid://b735o14qw6ist" path="res://Assets/BAD MOUSE.png" id="2_3ber4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u28px"]
+radius = 9.0
+
+[node name="Mouse" type="Area2D" unique_id=1173396721]
+position = Vector2(-2, 1)
+script = ExtResource("1_3ber4")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=261852924]
+texture_filter = 1
+texture = ExtResource("2_3ber4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1793349807]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_u28px")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

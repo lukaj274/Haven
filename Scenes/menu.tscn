@@ -37,7 +37,8 @@ metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=857011694]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.00034741423, 0.0031371235, 0.000856932, 1)
+theme_override_colors/font_color = Color(0.9425273, 0.7798995, 0.41726437, 1)
+theme_override_colors/font_shadow_color = Color(0.9, 0.216, 0.22739983, 1)
 theme_override_colors/font_outline_color = Color(0.39073128, 0.2780033, 9.62615e-08, 1)
 theme_override_fonts/font = SubResource("FontVariation_25bs2")
 theme_override_font_sizes/font_size = 72

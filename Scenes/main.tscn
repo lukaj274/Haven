@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b6vvkc4p36o56" path="res://Scenes/tile_map_layer.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dkwatx0ruyqiw" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://bqq245v7esvby" path="res://Scenes/main.gd" id="1_kry3j"]
+[ext_resource type="Texture2D" uid="uid://bp3kj4m67y6qe" path="res://Assets/New Piskel (10).png" id="2_6bp64"]
 [ext_resource type="AudioStream" uid="uid://dun1qbjpcn6de" path="res://Assets/Game-song.mp3" id="2_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dy624wo6y8ua" path="res://Scenes/apple.tscn" id="2_bo1nx"]
 
@@ -219,23 +220,17 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_priority = 0.0
 sources/4 = SubResource("TileSetAtlasSource_jjgbg")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u28px"]
-distance = -599.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3c67j"]
-normal = Vector2(0, 1)
-distance = 45.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t2h7q"]
-normal = Vector2(1, 0)
-distance = 46.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b42pr"]
-normal = Vector2(-1, 0)
-distance = -1110.0
+[sub_resource type="LabelSettings" id="LabelSettings_u28px"]
+font_size = 50
 
 [node name="Main" type="Node2D" unique_id=59448657]
 script = ExtResource("1_kry3j")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1308983500]
+offset_right = 1151.0
+offset_bottom = 679.0
+texture = ExtResource("2_6bp64")
+expand_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1251680065]
 stream = ExtResource("2_21xkr")
@@ -278,20 +273,17 @@ scale = Vector2(2, 2)
 position = Vector2(559, 226)
 scale = Vector2(2, 2)
 
-[node name="Boundaries" type="StaticBody2D" parent="." unique_id=273587923]
+[node name="ScoreText" type="Label" parent="." unique_id=1461740104]
+offset_left = 56.0
+offset_top = 40.0
+offset_right = 108.0
+offset_bottom = 63.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Score: "
+label_settings = SubResource("LabelSettings_u28px")
 
-[node name="Bottom" type="CollisionShape2D" parent="Boundaries" unique_id=1021687005]
-shape = SubResource("WorldBoundaryShape2D_u28px")
-
-[node name="Top" type="CollisionShape2D" parent="Boundaries" unique_id=1816758629]
-shape = SubResource("WorldBoundaryShape2D_3c67j")
-
-[node name="Left" type="CollisionShape2D" parent="Boundaries" unique_id=262348421]
-shape = SubResource("WorldBoundaryShape2D_t2h7q")
-
-[node name="Right" type="CollisionShape2D" parent="Boundaries" unique_id=1114450001]
-shape = SubResource("WorldBoundaryShape2D_b42pr")
-
+[connection signal="add_score" from="Player" to="." method="_on_player_add_score"]
 [connection signal="area_entered" from="Apple" to="Player" method="_on_apple_area_entered"]
 [connection signal="area_entered" from="Apple2" to="Player" method="_on_apple_area_entered"]
 [connection signal="area_entered" from="Apple3" to="Player" method="_on_apple_area_entered"]
