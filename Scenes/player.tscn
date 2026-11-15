@@ -18,6 +18,8 @@ metadata/_edit_group_ = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=191193375]
 
 [node name="Head" type="CharacterBody2D" parent="." unique_id=2118705235]
+motion_mode = 1
+wall_min_slide_angle = 0.8918632
 script = ExtResource("1_6t5aa")
 speed = 300.0
 menu = ExtResource("3_fkybt")
