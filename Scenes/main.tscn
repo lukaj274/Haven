@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dkwatx0ruyqiw" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://bqq245v7esvby" path="res://Scenes/main.gd" id="1_kry3j"]
 [ext_resource type="Texture2D" uid="uid://bp3kj4m67y6qe" path="res://Assets/New Piskel (10).png" id="2_6bp64"]
-[ext_resource type="AudioStream" uid="uid://dun1qbjpcn6de" path="res://Assets/Game-song.mp3" id="2_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dy624wo6y8ua" path="res://Scenes/apple.tscn" id="2_bo1nx"]
+[ext_resource type="AudioStream" uid="uid://dwtodswd5r8v1" path="res://game-song_eLjxKeup.mp3" id="3_21xkr"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7u77a"]
 load_path = "res://.godot/imported/New Piskel (2).png-3d24c5253c61fed48c994c32af58f107.ctex"
@@ -223,8 +223,9 @@ sources/4 = SubResource("TileSetAtlasSource_jjgbg")
 [sub_resource type="LabelSettings" id="LabelSettings_u28px"]
 font_size = 50
 
-[node name="Main" type="Node2D" unique_id=59448657]
+[node name="Main" type="Node2D" unique_id=59448657 node_paths=PackedStringArray("score_text")]
 script = ExtResource("1_kry3j")
+score_text = NodePath("ScoreText")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1308983500]
 offset_right = 1151.0
@@ -233,7 +234,7 @@ texture = ExtResource("2_6bp64")
 expand_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1251680065]
-stream = ExtResource("2_21xkr")
+stream = ExtResource("3_21xkr")
 autoplay = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1456900613]
@@ -274,14 +275,15 @@ position = Vector2(559, 226)
 scale = Vector2(2, 2)
 
 [node name="ScoreText" type="Label" parent="." unique_id=1461740104]
-offset_left = 56.0
-offset_top = 40.0
-offset_right = 108.0
-offset_bottom = 63.0
+offset_left = 61.0
+offset_top = 43.0
+offset_right = 1120.0
+offset_bottom = 112.0
 size_flags_horizontal = 0
 size_flags_vertical = 8
-text = "Score: "
+text = "0 "
 label_settings = SubResource("LabelSettings_u28px")
+horizontal_alignment = 2
 
 [connection signal="add_score" from="Player" to="." method="_on_player_add_score"]
 [connection signal="area_entered" from="Apple" to="Player" method="_on_apple_area_entered"]

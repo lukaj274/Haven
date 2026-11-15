@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b5yt6pti3qhym" path="res://Assets/New Piskel (4) (1).png" id="1_v6hj4"]
 [ext_resource type="Texture2D" uid="uid://li5vbkf5415q" path="res://Assets/New Piskel (6).png" id="2_kefmi"]
 [ext_resource type="Texture2D" uid="uid://bp3i35qndktnf" path="res://Assets/New Piskel (7).png" id="2_m85yq"]
-[ext_resource type="AudioStream" uid="uid://d2xetm6fpepcu" path="res://Assets/Menu-song.mp3" id="2_miasx"]
+[ext_resource type="AudioStream" uid="uid://c2js2chaj0aom" path="res://menu-song_pibEWril.mp3" id="2_miasx"]
 
 [sub_resource type="FontVariation" id="FontVariation_25bs2"]
 
