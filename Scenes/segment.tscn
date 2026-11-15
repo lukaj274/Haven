@@ -38,7 +38,8 @@ metadata/Active = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1434964910]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_u28px")
-animation = &"end"
+animation = &"middle"
+frame_progress = 0.40807948
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=577756675]
 shape = SubResource("CapsuleShape2D_y853w")

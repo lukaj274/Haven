@@ -250,40 +250,33 @@ script = ExtResource("1_8gbba")
 [node name="Player" parent="." unique_id=511959036 instance=ExtResource("1_jjgbg")]
 position = Vector2(339, 353)
 
-[node name="Apple" parent="." unique_id=1173396721 node_paths=PackedStringArray("player") instance=ExtResource("2_bo1nx")]
-position = Vector2(343, 165)
+[node name="Apple" parent="." unique_id=1173396721 instance=ExtResource("2_bo1nx")]
+position = Vector2(534, 493)
 scale = Vector2(2, 2)
-player = NodePath("../Player")
 
-[node name="Apple2" parent="." unique_id=1711002337 node_paths=PackedStringArray("player") instance=ExtResource("2_bo1nx")]
+[node name="Apple2" parent="." unique_id=1711002337 instance=ExtResource("2_bo1nx")]
 position = Vector2(984, 327)
 scale = Vector2(2, 2)
-player = NodePath("../Player")
 
-[node name="Apple3" parent="." unique_id=144413251 node_paths=PackedStringArray("player") instance=ExtResource("2_bo1nx")]
-position = Vector2(646, 327)
+[node name="Apple3" parent="." unique_id=144413251 instance=ExtResource("2_bo1nx")]
+position = Vector2(784, 164)
 scale = Vector2(2, 2)
-player = NodePath("../Player")
 
-[node name="Apple4" parent="." unique_id=1122392619 node_paths=PackedStringArray("player") instance=ExtResource("2_bo1nx")]
-position = Vector2(582, 489)
+[node name="Apple4" parent="." unique_id=1122392619 instance=ExtResource("2_bo1nx")]
+position = Vector2(822, 511)
 scale = Vector2(2, 2)
-player = NodePath("../Player")
 
-[node name="Apple5" parent="." unique_id=129109963 node_paths=PackedStringArray("player") instance=ExtResource("2_bo1nx")]
-position = Vector2(212, 500)
+[node name="Apple5" parent="." unique_id=129109963 instance=ExtResource("2_bo1nx")]
+position = Vector2(426, 109)
 scale = Vector2(2, 2)
-player = NodePath("../Player")
 
-[node name="Apple6" parent="." unique_id=1440515919 node_paths=PackedStringArray("player") instance=ExtResource("2_bo1nx")]
-position = Vector2(220, 277)
+[node name="Apple6" parent="." unique_id=1440515919 instance=ExtResource("2_bo1nx")]
+position = Vector2(116, 122)
 scale = Vector2(2, 2)
-player = NodePath("../Player")
 
-[node name="Apple7" parent="." unique_id=1382537941 node_paths=PackedStringArray("player") instance=ExtResource("2_bo1nx")]
-position = Vector2(330, 292)
+[node name="Apple7" parent="." unique_id=1382537941 instance=ExtResource("2_bo1nx")]
+position = Vector2(559, 226)
 scale = Vector2(2, 2)
-player = NodePath("../Player")
 
 [node name="Boundaries" type="StaticBody2D" parent="." unique_id=273587923]
 

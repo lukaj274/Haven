@@ -36,7 +36,7 @@ func _physics_process(_delta: float) -> void:
 			rotation = velocity.angle() + PI/2
 	
 	var wanted_rotation = Input.get_axis("turn_left", "turn_right")
-	rotation_degrees += wanted_rotation * 2
+	rotation_degrees += wanted_rotation * 2.6
 
 func copy() -> void:
 	more.emit()
