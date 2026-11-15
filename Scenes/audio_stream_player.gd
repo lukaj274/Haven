@@ -1,14 +1,17 @@
-extends Node
+extends Node2D
 
-func _ready():
-	# Create a new AudioStreamPlayer node
-	var music_player = AudioStreamPlayer.new()
-	
-	# Add it to the current scene so it can run
-	add_child(music_player)
-	
-	# Load your mp3 file (make sure the path matches where you put it)
-	music_player.stream = load("res://Game-song.mp3")
-	
-	# Start playing the music
-	music_player.play()
+@export var score: int
+@export var menu: PackedScene
+
+func _ready() -> void:
+	score = 0
+
+func _process(_delta: float) -> void:
+	pass
+
+func add() -> void:
+	score += 1
+	$AudioStreamPlayer.stream = preload("res://Assets/nomNOM.wav")
+	$AudioStreamPlayer.play()
+	$Head.copy()
+	print(score)

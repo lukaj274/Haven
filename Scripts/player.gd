@@ -14,6 +14,8 @@ func _process(delta: float) -> void:
 
 
 func add() -> void:
+	$AudioStreamPlayer.stream = preload("res://Assets/nomNOM.wav"); 
+	$AudioStreamPlayer.play()
 	score += 1
 	$Head.copy()
 	print(score)
