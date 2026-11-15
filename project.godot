@@ -13,7 +13,11 @@ config_version=5
 config/name="Haven"
 run/main_scene="uid://cc6sfumm80wt4"
 config/features=PackedStringArray("4.7", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://sjj3xq4o6ju1"
 
 [display]
 

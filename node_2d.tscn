@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://c1yh7tl5twgw3"]
 
 [ext_resource type="Script" uid="uid://cdkivmcm0qs" path="res://character_body_2d.gd" id="1_epypp"]
-[ext_resource type="Texture2D" uid="uid://1ptykqv8du15" path="res://stone.png" id="1_wtcfe"]
-[ext_resource type="Texture2D" uid="uid://d3kx3xilwb8vr" path="res://New Piskel (2).png" id="3_epypp"]
+[ext_resource type="Texture2D" uid="uid://1ptykqv8du15" path="res://Assets/stone.png" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://d3kx3xilwb8vr" path="res://Assets/New Piskel (2).png" id="3_epypp"]
 [ext_resource type="Script" uid="uid://dx84h1h01m4g3" path="res://tile_map_layer.gd" id="4_0hol4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
