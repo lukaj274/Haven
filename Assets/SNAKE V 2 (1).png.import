@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgspkmyueuuue"
-path="res://.godot/imported/SNAKE  (2).png-9c63493c4311b8bc8ed1132404d3ffed.ctex"
+uid="uid://dupoqnmt1jfa3"
+path="res://.godot/imported/SNAKE V 2 (1).png-b45fb4b0cfe2db3deac10865fbb4dc63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SNAKE  (2).png"
-dest_files=["res://.godot/imported/SNAKE  (2).png-9c63493c4311b8bc8ed1132404d3ffed.ctex"]
+source_file="res://Assets/SNAKE V 2 (1).png"
+dest_files=["res://.godot/imported/SNAKE V 2 (1).png-b45fb4b0cfe2db3deac10865fbb4dc63.ctex"]
 
 [params]
 
