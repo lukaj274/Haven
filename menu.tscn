@@ -80,12 +80,13 @@ stretch_mode = 5
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=20217540]
 
 [node name="LastScoreText" type="Label" parent="." unique_id=808803411]
-offset_left = 824.0
+offset_left = 455.0
 offset_top = 562.0
 offset_right = 1126.0
 offset_bottom = 631.0
 text = "Last Score: 0"
 label_settings = SubResource("LabelSettings_u28px")
+horizontal_alignment = 2
 script = ExtResource("6_l48gv")
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
