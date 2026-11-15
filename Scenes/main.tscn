@@ -244,12 +244,12 @@ scale = Vector2(2, 2)
 player = NodePath("../Player")
 
 [node name="Apple4" parent="." unique_id=1122392619 node_paths=PackedStringArray("player") instance=ExtResource("2_bo1nx")]
-position = Vector2(646, 529)
+position = Vector2(582, 489)
 scale = Vector2(2, 2)
 player = NodePath("../Player")
 
 [node name="Apple5" parent="." unique_id=129109963 node_paths=PackedStringArray("player") instance=ExtResource("2_bo1nx")]
-position = Vector2(220, 529)
+position = Vector2(212, 500)
 scale = Vector2(2, 2)
 player = NodePath("../Player")
 
